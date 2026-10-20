@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Order - OrderBridge</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <main>
+        <h1>Add New Order</h1>
+
+        <form action="/add-order" method="POST">
+            <label>Customer Name</label>
+            <input
+              type="text"
+              name="customer_name"
+              placeholder="Enter customer name"
+              required
+            >
+            <br><br>
+
+            <label>Product Name</label>
+            <input
+              type="text"
+              name="product_name"
+              placeholder="Enter product name"
+              required
+           >
+
+            <br><br>
+
+            <label>Quantity</label>
+           <input
+             type="number"
+             name="quantity"
+             placeholder="Enter quantity"
+             min="1"
+            required
+           >
+
+            <br><br>
+
+            <button type="submit">Save Order</button>
+        </form>
+
+        <p><a href="/">Back to Dashboard</a></p>
+    </main>
+</body>
+</html>

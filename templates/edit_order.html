@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Order - OrderBridge</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <main>
+        <h1>Edit Order</h1>
+
+        <form method="POST">
+            <label>Customer Name</label>
+            <input
+                type="text"
+                name="customer_name"
+                value="{{ order[1] }}"
+                required
+            >
+
+            <br><br>
+
+            <label>Product Name</label>
+            <input
+                type="text"
+                name="product_name"
+                value="{{ order[2] }}"
+                required
+            >
+
+            <br><br>
+
+            <label>Quantity</label>
+            <input
+                type="number"
+                name="quantity"
+                value="{{ order[3] }}"
+                min="1"
+                required
+            >
+
+            <br><br>
+
+            <button type="submit">Update Order</button>
+        </form>
+
+        <p><a href="/">Back to Dashboard</a></p>
+    </main>
+</body>
+</html>
