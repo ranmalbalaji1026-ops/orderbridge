@@ -137,6 +137,12 @@ def edit_order(order_id):
 
 
 
+
+
 if __name__ == "__main__":
+    from database import create_table
+
+    create_table()
     add_status_column()
-    app.run(debug=True) 
+
+    app.run(debug=True)
